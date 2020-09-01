@@ -1,4 +1,4 @@
-package tn.cnrps.ws.soap.loaneligibility.endPoint;
+package tn.cnrps.ws.soap.endPoint;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;

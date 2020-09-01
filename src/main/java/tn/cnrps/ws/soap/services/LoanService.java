@@ -15,7 +15,7 @@ public class LoanService {
 		WsResponse wsResponse = new WsResponse();
 		List<String> criteriaMismatch = wsResponse.getCriteriaMismatch();
 		
-		if(customerRequest.getAge()<30 && customerRequest.getAge() >50)
+		if(customerRequest.getAge()<30 || customerRequest.getAge() >50)
 			criteriaMismatch.add("Age must be between 30 and 50.");
 		if(customerRequest.getYearlyIncome() < 12000)
 			criteriaMismatch.add("Yearly Income must be over 12000.");
@@ -29,7 +29,7 @@ public class LoanService {
 			wsResponse.setIsEligible(false);
 		}
 		
-		return null;
+		return wsResponse;
 	}
 
 }
